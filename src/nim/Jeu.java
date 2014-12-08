@@ -123,7 +123,10 @@ public class Jeu {
 	}
 	
 	public static void insererJoueurBD(String pseudo, String password){
-		//TODO Insérer un nouveau joueur dans la BD à partir de pseudo et password.
+		String mdp =getMotDePasse(String pseudo);
+		if (mdp ="ERROR") return false
+		else if (password = mdp) return true 
+		else return false;
 	}
 	
 	public static void uploadJoueur(Joueur j){
